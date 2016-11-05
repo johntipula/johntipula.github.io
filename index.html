@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>John Tipula</title>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      var container = $('.gradients');
+      function fade() {
+        var divs = container.children();
+        $(".current").transition({opacity: 1}, 5000, 'linear', function() {
+          $('.current').removeClass('current');
+          firstDiv = divs.first();
+          firstDiv.addClass('current').css({opacity: 0});
+          firstDiv.appendTo(container);
+          fade();
+        });
+      }
+      fade();
+    });
+  </script>
+</head>
+<body class="site">
+  <div class="gradients">
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="pink"></div>
+    <div class="mint"></div>
+    <div class="beach"></div>
+    <div class="purple current"></div>
+  </div>
+  <section class="container">
+    <div class="info">
+      <figure class="infoAvatar ">
+        <img class="img animated bounceInUp" src="img/avatar.png" srcset="img/avatar@2x.png 2x" alt="">
+        <figcaption class="name animated bounceInDown">
+          <h1>@johntipula</h1>
+          <div id="hplogo"></div>
+        </figcaption>
+      </figure>
+      <ul class="infoSocial animated zoomIn">
+        <li class="infoSocialItem">
+          <a target="_blank" class="fa fa-google-plus icon" href="https://plus.google.com/116022052742705966634"></a>
+        </li>
+        <li class="infoSocialItem">
+          <a target="_blank" class="fa fa-facebook icon" href="https://www.facebook.com/johntipula"></a>
+        </li>
+        <li class="infoSocialItem">
+          <a target="_blank" class="fa fa-twitter icon" href="https://twitter.com/johntipula"></a>
+        </li>
+        <li class="infoSocialItem">
+          <a target="_blank" class="fa fa-instagram icon" href="https://www.instagram.com/johntipula"></a>
+        </li>
+        <li class="infoSocialItem">
+          <a target="_blank" class="fa fa-linkedin icon" href="https://mx.linkedin.com/in/johntipula"></a>
+        </li>
+        <li class="infoSocialItem">
+          <a target="_blank" class="fa fa-github icon" href="https://github.com/johntipula"></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <script src="//www.google.com/js/google.js"></script>
+  <script src="js/googledoodle.js"></script>
+</body>
+</html>
+
